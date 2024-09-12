@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Día del Programador</title>
+    <style>
+        body {
+            font-family: Comic Sans MS, cursive;
+            background-image: url(https://i.pinimg.com/originals/48/d0/63/48d0633395386645bdc8975ba9a9c691.jpg);
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 3em;
+            color: #e04251;
+        }
+        p {
+            font-size: 1.5em;
+            color: #38197a;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 1.8em;
+            color: #ff6347;
+        }
+        .heart {
+            width: 100px;
+            height: 90px;
+            background-color: red;
+            position: relative;
+            display: inline-block;
+            margin-top: 30px;
+            transform: rotate(-45deg); /* Rotar el corazón */
+            animation: move 2s infinite; /* Agregar animación */
+        }
+        .heart::before,
+        .heart::after {
+            content: "";
+            width: 100px;
+            height: 90px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .heart::before {
+            top: -50px;
+            left: 0;
+        }
+        .heart::after {
+            top: 0;
+            left: 50px;
+        }
+
+        /* Animación para mover el corazón */
+        @keyframes move {
+            0%, 100% {
+                transform: rotate(-45deg) translate(0, 0);
+            }
+            50% {
+                transform: rotate(-45deg) translate(0, -20px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Feliz día del programador</h1>
+    <p>Para el mejor programador del mundo</p>
+    <p id="message">I love you</p>
+
+    <div class="heart"></div>
+
+</body>
+</html>
